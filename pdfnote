@@ -1,0 +1,5 @@
+#!/bin/bash
+
+for arg in $@; do
+	pandoc --from gfm --to=pdf -o ${arg%.*}.pdf ${arg%.*}.md
+done
